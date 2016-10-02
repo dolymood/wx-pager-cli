@@ -1,0 +1,40 @@
+{
+  "name": "wx-pager-cli",
+  "version": "0.0.1",
+  "description": "wx-pager's CLI interface",
+  "preferGlobal": "true",
+  "main": "index.js",
+  "bin": {
+    "wxpager": "bin/wxpager"
+  },
+  "keywords": [
+    "wx-pager-cli",
+    "wx-pager",
+    "wx-app page 生成器",
+    "wx-app page",
+    "wx-app"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dolymood/wx-pager-cli.git"
+  },
+  "author": "dolymood",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dolymood/wx-pager-cli/issues"
+  },
+  "homepage": "https://github.com/dolymood/wx-pager-cli#readme",
+  "scripts": {
+    "test": "mocha test/index.js --slow 5000 --timeout 10000"
+  },
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "commander": "^2.8.1",
+    "mkdirp": "^0.5.1"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5",
+    "rimraf": "^2.4.0"
+  }
+}

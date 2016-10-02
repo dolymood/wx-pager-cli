@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+var program = require('commander')
+
+program
+  .version(
+    'wx-pager version: '     + require('wx-pager/package.json').version + '\n' +
+    'wx-pager-cli version: ' + require('../package.json').version
+  )
+  .usage('[options] [dir|file ...]')
+  .option('-o, --output <dir>', 'output the rendered files to <dir>')
+  .option('-w, --watch', 'watch files for changes and automatically re-render')
+  .option('-s, --silent', 'do not output logs')
+
+
+program.on('--help', function () {
+  console.log('  Examples:')
+  console.log('')
+  console.log('    # Render all files in the `templates` directory:')
+  console.log('    $ wxpager templates')
+  console.log('')
+  console.log('    # Create {foo,bar}.{wxml,js,wxss,json}:')
+  console.log('    $ wxpager {foo,bar}.wx')
+  console.log('')
+  console.log('    # Render all files in `foo` and `bar` directories to `/tmp`:')
+  console.log('    $ wxpager foo bar --output /tmp')
+  console.log('')
+})
+
+program.parse(process.argv)
+
+if (!program.args.length) {
+  return program.outputHelp()
+}
+
+require('../')(program)

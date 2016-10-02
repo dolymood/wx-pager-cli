@@ -1,0 +1,25 @@
+<template>
+<view class="sub-view">
+  <text>sub content</text>
+</view>
+</template>
+
+<script>
+Page({
+  onReady: function () {
+    console.log('sub ready')
+  }
+})
+</script>
+
+<style>
+.sub-view {
+  color: green;
+}
+</style>
+
+<config>
+{
+  "navigationBarTitleText": "画布sub"
+}
+</config>
