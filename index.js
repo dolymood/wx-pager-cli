@@ -91,7 +91,7 @@ module.exports = function (program) {
       if (program.watch) {
         watchFile(path, null, rootPath)
       }
-      var output
+      var output = path
       if (program.output) {
         // prepend output directory
         if (rootPath) {
