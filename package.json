@@ -1,6 +1,6 @@
 {
   "name": "wx-pager-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "wx-pager's CLI interface",
   "preferGlobal": "true",
   "main": "index.js",
@@ -30,7 +30,8 @@
   "dependencies": {
     "chalk": "^1.0.0",
     "commander": "^2.8.1",
-    "mkdirp": "^0.5.1"
+    "mkdirp": "^0.5.1",
+    "wx-pager": "0.0.1"
   },
   "devDependencies": {
     "chai": "^3.0.0",
